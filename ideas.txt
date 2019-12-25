@@ -1,0 +1,22 @@
+1. Camera changed to matrix and vertex as now its just a matrix - So it may effect it's use.
+
+2. Check W and V values in matrices and Vertices and make sure that the values are not set to 1 from the get go, 
+   it will effect cam position.
+
+3. Check homogenize method as it greatly effects drawn verts.
+
+4. Run watch lists of _transformedVertices at different method calls and check the values are changing.
+
+5. Check final verts via watch list are the ones drawn.   
+
+6. Check transformTransformedVertices does not call dehomogenize and it is only called by itself within render.
+
+ - Above should be main problems.
+
+World Transformation
+Camera Transformation - FUCKED
+Perspective Projection = (d / aspect ratio)
+Dehomogenize = Divide all parts by W
+Screen Transformation (ViewPoint Transformation)
+
+AND . . . . . fix the transFormTransformed co-ordinates - ALSO FUCKED
